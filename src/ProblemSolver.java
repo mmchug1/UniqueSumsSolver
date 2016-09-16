@@ -6,12 +6,11 @@ public class ProblemSolver {
 	{
 		Random rand = new Random();
 		int[] temp;
-		int numbersLeft;
+		int numbersLeft = numbers.length - 1;
 		int randNum = 0;
 		
 		for (int i = 0; i < array.length; i++)
 		{
-			numbersLeft = numbers.length - 1;
 			randNum = rand.nextInt(numbers.length);
 			array[i] = numbers[randNum];
 			if (randNum < numbersLeft)
@@ -23,6 +22,7 @@ public class ProblemSolver {
 					temp[j] = numbers[j];
 				}
 				numbers = temp;
+				numbersLeft--;
 			}
 		}
 		return array;
