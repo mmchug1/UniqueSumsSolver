@@ -66,12 +66,12 @@ public class ProblemSolver {
 		int[] numArray1 = new int[3], numArray2 = new int[3], sumArray = new int[3];
 		int num1 = 0, num2 = 0, sum = 0;
 		while (!solved){
-			int[] numbers = {1,2,3,4,5,6,7,8,0};
-			num1 = combineDigits(numArray1 = fillArray(numbers.clone(), numArray1));
-			numbers = removeUsedNumbers(numbers, numArray1);
-			num2 = combineDigits(fillArray(numbers.clone(), numArray2));
-			numbers = removeUsedNumbers(numbers, numArray2);
-			sum = combineDigits(fillArray(numbers, sumArray));	
+			int[] digits = {1,2,3,4,5,6,7,8,9};
+			num1 = combineDigits(numArray1 = fillArray(digits.clone(), numArray1));
+			digits = removeUsedNumbers(digits, numArray1);
+			num2 = combineDigits(fillArray(digits.clone(), numArray2));
+			digits = removeUsedNumbers(digits, numArray2);
+			sum = combineDigits(fillArray(digits, sumArray));	
 			if ((num1 + num2) == sum)
 				solved = true;
 		}
